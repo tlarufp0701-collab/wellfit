@@ -1,0 +1,16 @@
+# Render Blueprint — New + > Blueprint 에서 이 저장소를 고르면 자동 설정됩니다.
+services:
+  - type: web
+    name: wellfit
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /employee
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
