@@ -8,7 +8,7 @@ services:
     buildCommand: npm ci && npm run build
     startCommand: npm start
     autoDeploy: true
-    healthCheckPath: /employee
+    healthCheckPath: /
     envVars:
       - key: NODE_VERSION
         value: "22"
